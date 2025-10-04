@@ -3,8 +3,7 @@ package october.day031025;
 import java.util.HashMap;
 import java.util.Scanner;
 public class Main {
-    public static int uniqueValues(int[] arr){
-        int uniqueCount = 0;
+    public static int uniqueValues(int[] arr) {
         HashMap<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < arr.length; i++) {
             if (map.containsKey(arr[i])) {
@@ -13,9 +12,8 @@ public class Main {
                 map.put(arr[i], 1);
             }
         }
-        uniqueCount = map.size();
 
-        return uniqueCount;
+        return map.size();
     }
 
     public static void main(String[] args) {
