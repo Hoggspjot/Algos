@@ -9,13 +9,14 @@ public class Main3 {
     }
     public static int [] shiftValuesInArr(int[] arr, int shift) {
         int[] newArr = new int[arr.length];
-        int newIdx = Math.abs(arr.length - shift);
+
+        if (shift == 0) return arr;
+
+        int x = shift % arr.length;
+
         for (int i = 0; i < arr.length; i++) {
-            if (i + shift <= arr.length - 1) {
-                newArr[i + shift] = arr[i];
-            } else {
-                newArr[i + shift - arr.length] = arr[i];
-            }
+            int newIdx = (i + x) % arr.length;
+            newArr[newIdx] = arr[i];
         }
 
         return newArr;
