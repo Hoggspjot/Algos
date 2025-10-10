@@ -1,4 +1,4 @@
-package october.day091025;
+package october.day101025.task1;
 
 import java.util.Scanner;
 class Node{
@@ -29,13 +29,37 @@ public class Main {
             }
             current = current.next;
         }
+
+
+    }
+    public static Node delElemFromSLL(Node head, int value) {
+        if (Integer.parseInt(head.data) == value) {
+            head = head.next;
+            return head;
+        }
+        Node current = head;
+
+        while (current.next != null) {
+            if (Integer.parseInt(current.next.data) == value ) {
+                current.next = current.next.next;
+                break;
+            }
+            current = current.next;
+        }
+
+        return head;
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        int value = sc.nextInt();
+        sc.nextLine();
         String s = sc.nextLine();
         Node head = createSLLFromString(s);
+        head = delElemFromSLL(head, value);
         printSLL(head);
     }
 }
 
-//Реализовать и вывести односвязный список, состоящий из исходной вводимой строки.
+
+//Удалить первое появление элемента с значением value из односвязного списка.
+// Если данный элемент отсутствует, то вывести исходный список.
