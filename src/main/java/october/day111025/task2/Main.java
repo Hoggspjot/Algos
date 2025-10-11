@@ -24,8 +24,8 @@ public class Main {
         int count = 0;
 
         Node current = head;
-        while (current.next != null) {
-            if (Integer.parseInt(current.next.data) == value) {
+        while (current != null) {
+            if (Integer.parseInt(current.data) == value) {
                 count++;
             }
             current = current.next;
