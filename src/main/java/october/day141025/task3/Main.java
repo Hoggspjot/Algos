@@ -1,4 +1,4 @@
-package october.day131025.task3;
+package october.day141025.task3;
 
 import java.util.Arrays;
 import java.util.Scanner;
