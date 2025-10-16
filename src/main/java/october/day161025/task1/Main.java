@@ -3,8 +3,7 @@ package october.day161025.task1;
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println(fibo(12));
-        System.out.println(fib(12));
+        System.out.println(fib(100));
 
     }
 
@@ -15,7 +14,7 @@ public class Main {
     }
 
     public static long fib(int n) {
-        int[] arr = new int[n + 1];
+        long[] arr = new long[n + 1];
         arr[0] = 0;
         arr[1] = 1;
 
