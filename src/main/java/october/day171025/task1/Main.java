@@ -23,5 +23,4 @@ public class Main {
         mem[n] = result;
         return result;
     }
-
 }
